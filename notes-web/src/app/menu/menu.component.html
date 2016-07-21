@@ -1,0 +1,18 @@
+<header>
+  <nav>
+    <ul class="nav nav-pills">
+      <li routerLinkActive="active" *ngIf="!isAuthenticated()">
+        <a [routerLink]="['/login']" class="nav-item">Entrar</a>
+      </li>
+      <li routerLinkActive="active" *ngIf="!isAuthenticated()">
+        <a [routerLink]="['/signup']" class="nav-item">Nova Conta</a>
+      </li>
+      <li routerLinkActive="active" *ngIf="isAuthenticated()">
+        <a [routerLink]="['/notes']" class="nav-item">Notes</a>
+      </li>
+      <li *ngIf="isAuthenticated()" (click)="logout()">
+        <a class="nav-item" style="cursor: pointer;">Logout</a>
+      </li>
+    </ul>
+  </nav>
+</header>

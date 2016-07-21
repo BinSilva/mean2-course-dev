@@ -4,36 +4,57 @@ import {User} from "./user";
 
 @Injectable()
 export class AuthService {
-    
-    signIn():Observable<any> {
-        return Observable.create((observer) => {
 
+    signIn(user:User):Observable<any> {
+        return Observable.create((observer) => {
+          firebase.auth().signInWithEmailAndPassword(user.email, user.password)
+            .then(function (currentUser) {
+              currentUser.getToken().then(function (token) {
+                localStorage.setItem('X-Auth-Token', token);
+
+                observer.next(currentUser);
+              }, 
+              function (err) {
+                observer.error(err);
+              });
+            });
         });
     }
 
     signUp(user:User):Observable<any> {
         return Observable.create((observer) => {
-            firebase.auth()
-                .createUserWithEmailAndPassword(user.email, user.password)
-                .then(function (currentUser) {
-                    currentUser.getToken().then(function (token) {
-                        localStorage.setItem('token', token);
-                        observer.next(currentUser);
-                    });
-                })
-                .catch(function(error) {
-                    observer.error(error);
+            firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
+              .then(function (currentUser) {
+                currentUser.getToken().then(function (token) {
+                  localStorage.setItem('X-Auth-Token', token);
+
+                  observer.next(currentUser);
                 });
+              },
+              function (err) {
+                observer.error(err);
+              });
         });
     }
 
     signOut():Observable<any> {
         return Observable.create((observer) => {
-
+          firebase.auth().signOut()
+            .then(function () {
+              localStorage.clear();
+              
+              observer.next();
+            }, function (err) {
+              observer.error(err);
+            });
         });
     }
 
-    static isAuthenticated() {
+    static isAuthenticated():boolean {
+      if (firebase.auth().currentUser) {
+        return true;
+      } else {
+        return false;
+      }
     }
-    
 }
