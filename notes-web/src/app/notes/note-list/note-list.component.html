@@ -1,0 +1,8 @@
+<div class="container">
+
+    <app-note-detail (remove)="onRemove($event)"
+                     [note]="note"
+                     *ngFor="let note of notes">
+    </app-note-detail>
+
+</div>
