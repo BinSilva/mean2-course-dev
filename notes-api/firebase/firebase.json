@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "notes-web-atilla",
+  "private_key_id": "08422da7de1dc9ba85667b7b3c33fd8200592d79",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCCU4st30MTvZVI\n5zyFQlL3hXoKgrKJ8JgBN8yc0v4ufopYcOXQS2MvUSYKvyIlOv3Ei8i0doyijYD2\nPCHL9pqd9PzQ7TDzXZWemH49UvILUzHXdMTWSJrGR6kB6iq3rG3optZfamxI/+yn\n6GfLV6Qm+3psMf7iV/kACZumqTUsakQu8iFoEZEaslsccoRHkOfyN1IjL8pplJBm\nAC8Q1DxCTXFn4T2PuCXZwAyzayBKJ4pI8buWqLRx9czbpniuIT9+KZNwGHW9zb5Y\nkInaq8bdWqv4LpuciFgS8U/N1+/yHshs50SfznSiadgNbJJn9BDLwde4rtbA2OHx\nxVAextqtAgMBAAECggEATlxHKfy8yyjJkv0eQY3Abv19hMZS7WeRLeJMD9s5Y+FH\n86dmNtitOW0Ub4++yx3uKXhW5FMHelGUwfkj5QxQqTr9q+2B6kJRzPsppFu0FyUd\nqcuW8rTTAvdhYjpXFvsBVsrByLsngrkGpWqyxevbUmkQke95rsRwfhpI0WuaAiq6\nklMnnJinzVzj79OhDKqNa17zNvB+luI394dhMnlWz012olb9GPxqvFlh6LT4Yy7m\nYfTXUIhXaISwgiQF1zLg/8DXqQFLZ/p7xqRcfgHgDXsRC2Ujl6eve139DNF5t7F2\nqs4Cg2WTuY3wku7CXwno+N7Qa8SuC6UuOotDpgaITQKBgQDx9E0ji964FH6dR5dq\ng9VP6P/CmTRvvaDDcvc5KmBgXLMr/wJ7G+Dm3uygFA1B9jllgdbngPa3w3DBrTjB\n6Z6OKVsSfLEALk+cV0bYL3aFwMFEMg2LdLcUgStWIXmvfOKA+BQBpO5OY8nj7NQ2\n5GF1S5Q1GhBZDeNAh5hB6aveqwKBgQCJ5FT6vk5MyaYh41VL9Kexsr6QQsYrVbD1\nKJ+ejcobQsuMbPjT5xMnP8R1+802tq8LbcZK3ekuz4j0WMbVvf1eD0zXVMGs4/7E\nkc+pCfIzwJfUa7OF/IP6o0kEKP8KQww6R4hkb12/gy+eku1j1mPWiycIYrnX0yYb\n+BeC6utMBwKBgGcSyxXcjSngWTwJdqDCvsnHGcW93I/JucXpoRYyTlJey1lvzo/B\nhaL0zts3D5rNGRB8Kp/+2ZvZX5yyfZ5mNsybI5gRlJneIL4alCyes6AxSGQT6p9B\nPok2qc6MfjlbO2bzyBoXOAofCq/VgWZNDpOYee/RRauadfhUi3Fw6W33AoGAM2l5\nsb+QzBqHIa10GQzQFXYSjREIeBHMF6wcz24IQ9/Eqsfago9uWbzx0BehLNwyKa21\nOCbDEVv5sTkEcZ8Tv6Uuvj5ws7iSPdIrvdfigR82vNGnLra2spV83Ns4NChJf9U5\n6lCHgKc18wbPEeFWeiCJ3huJNQoZ9GWsxng2YLMCgYEA03JhfnIxh8MZtcD6p0GW\nhRAr1Drie0+ZrqPowlZRUQpBmqUQL9LIMZf0H/wO8c4RsuqF+zo0XdCALHOgKjHC\ntXXEF0hVvfYJIjPocf6f/EIVe4CVx2dy5ByFBj3EOrvq10XLg++laJk6u/dMj+4T\nvPDDWqB8zhZTKqqve3X0y5Q=\n-----END PRIVATE KEY-----\n",
+  "client_email": "notes-api@notes-web-atilla.iam.gserviceaccount.com",
+  "client_id": "108156552909902330855",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/notes-api%40notes-web-atilla.iam.gserviceaccount.com"
+}

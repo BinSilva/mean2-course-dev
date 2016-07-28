@@ -5,7 +5,6 @@ var NoteService = {
     create: create,
     update: update,
     remove: remove,
-    findAll: findAll,
     findById: findById,
     findByUserEmail: findByUserEmail
 };
@@ -36,27 +35,14 @@ function findById(id) {
     });
 }
 
-function findAll() {
-    return new Promise(function(resolve, reject) {
-        var criteria = {};
-
-        Note.find(criteria, function (err, docs) {
-            if (err) return reject(err);
-
-            resolve(docs);
-        });
-    });
-}
-
 function remove(id) {
-    return new Promise(function(resolve, reject) {
-
-        Note.findByIdAndRemove(id, function (err) {
+    return new Promise(function (resolve, reject) {
+        Note.findByIdAndRemove(id, function (err, doc) {
             if (err) return reject(err);
+            if (!doc) return reject('Nota não encontrada.');
 
-            resolve();
+            resolve(doc);
         });
-
     });
 }
 

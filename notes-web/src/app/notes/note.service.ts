@@ -12,29 +12,13 @@ export class NoteService {
     findAll():Observable<any> {
         let url = 'http://localhost:3000/api/notes/';
 
-        //return this.httpClient.get(url);
-
-        return Observable.create(
-            observer => {
-                observer.next([
-                    new Note('1', 'Note 1', 'Note 1'),
-                    new Note('2', 'Note 2', 'Note 2'),
-                    new Note('3', 'Note 3', 'Note 3')
-                ])
-            }
-        );
+        return this.httpClient.get(url);
     }
 
     findById(id):Observable<any> {
-        let url = 'http://localhost:3000/api/notes/';
+        let url = 'http://localhost:3000/api/notes/' + id;
 
-        // return this.httpClient.get(url);
-
-        return Observable.create(
-            observer => {
-                observer.next(new Note('1', 'Note 1', 'Note 1'))
-            }
-        );
+        return this.httpClient.get(url);
     }
 
     create(note:Note):Observable<any> {
