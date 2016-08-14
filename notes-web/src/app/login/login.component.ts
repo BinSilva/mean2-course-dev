@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthService} from "../shared/auth.service";
-import {User} from "../shared/user";
-import {ROUTER_DIRECTIVES, Router} from "@angular/router";
+import {ROUTER_DIRECTIVES} from "@angular/router";
 
 @Component({
   moduleId: module.id,
@@ -12,17 +10,19 @@ import {ROUTER_DIRECTIVES, Router} from "@angular/router";
 })
 export class LoginComponent implements OnInit {
 
-  public user:User = new User(null, null);
+  email:string;
+  senha:string;
 
-  constructor(private authService:AuthService, private router:Router) {}
+  constructor() {}
 
-  onSubmit():void {
-    this.authService.signIn(this.user).subscribe(
-      () => {
-        this.router.navigate(['/notes']);
-      },
-      (err) => console.log(err)
-    );
+  login():void {
+    firebase.auth().signInWithEmailAndPassword(this.email, this.senha)
+      .then((user) => {
+        console.log(user.email);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   }
 
   ngOnInit() {

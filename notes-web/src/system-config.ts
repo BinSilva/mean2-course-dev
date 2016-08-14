@@ -7,13 +7,10 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
-  'moment': 'vendor/moment/moment.js',
-  'ng2-bootstrap': 'vendor/ng2-bootstrap'
 };
 
 /** User packages configuration. */
 const packages: any = {
-  'ng2-bootstrap': 'ng2-bootstrap.js'
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -37,13 +34,13 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
-  'app/signup',
   'app/login',
+  'app/nova-conta',
   'app/menu',
-  'app/notes',
-  'app/notes/note-detail',
-  'app/notes/note-list',
-  'app/notes/note-form',
+  'app/note',
+  'app/note/note-list',
+  'app/note/note-form',
+  'app/note/note-detail',
   /** @cli-barrel */
 ];
 

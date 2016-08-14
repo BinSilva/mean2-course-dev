@@ -1,17 +1,17 @@
 <header>
   <nav>
     <ul class="nav nav-pills">
-      <li routerLinkActive="active" *ngIf="!isAuthenticated()">
-        <a [routerLink]="['/login']" class="nav-item">Entrar</a>
+      <li [routerLinkActive]="'active'" *ngIf="!isLogado()">
+        <a class="nav-item" [routerLink]="['login']">Login</a>
       </li>
-      <li routerLinkActive="active" *ngIf="!isAuthenticated()">
-        <a [routerLink]="['/signup']" class="nav-item">Nova Conta</a>
+      <li [routerLinkActive]="'active'" *ngIf="!isLogado()">
+        <a class="nav-item" [routerLink]="['nova-conta']">Nova Conta</a>
       </li>
-      <li routerLinkActive="active" *ngIf="isAuthenticated()">
-        <a [routerLink]="['/notes']" class="nav-item">Notes</a>
+      <li [routerLinkActive]="'active'" *ngIf="isLogado()">
+        <a class="nav-item" [routerLink]="['note']">Notes</a>
       </li>
-      <li *ngIf="isAuthenticated()" (click)="logout()">
-        <a class="nav-item" style="cursor: pointer;">Logout</a>
+      <li style="cursor: pointer;" *ngIf="isLogado()">
+        <a class="nav-item" (click)="logout()">Sair</a>
       </li>
     </ul>
   </nav>

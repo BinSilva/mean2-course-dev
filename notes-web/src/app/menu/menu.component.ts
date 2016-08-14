@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ROUTER_DIRECTIVES, Router} from "@angular/router";
-import {AuthService} from "../shared/auth.service";
+import {ROUTER_DIRECTIVES} from "@angular/router";
 
 @Component({
   moduleId: module.id,
@@ -11,21 +10,22 @@ import {AuthService} from "../shared/auth.service";
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private authService:AuthService, private router:Router) {}
+  constructor() {}
 
-  isAuthenticated():boolean {
-    return AuthService.isAuthenticated();
-  }
-  
   logout():void {
-    this.authService.signOut().subscribe(
-      () => {
-        this.router.navigate(['/login']);
-      },
-      (err) => console.log(err)
+    firebase.auth().signOut().then(
+      () => console.log('logged out!')
     );
   }
-  
+
+  isLogado():boolean {
+    if (firebase.auth().currentUser) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   ngOnInit() {
   }
 
